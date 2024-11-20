@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .calculator {
+      max-width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .display {
+      height: 60px;
+      text-align: right;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="calculator bg-light p-4">
+    <div class="form-group">
+      <input type="text" aria-placeholder="0" id="result" class="form-control display" placeholder="0" disabled>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <button onclick="displayContent('7')" class="btn btn-secondary btn-block">7</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('8')" class="btn btn-secondary btn-block">8</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('9')" class="btn btn-secondary btn-block">9</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('%')" class="btn btn-warning btn-block">%</button>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-3">
+        <button onclick="displayContent('4')" class="btn btn-secondary btn-block">4</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('5')" class="btn btn-secondary btn-block">5</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('6')" class="btn btn-secondary btn-block">6</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('*')" class="btn btn-warning btn-block">*</button>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-3">
+        <button onclick="displayContent('1')" class="btn btn-secondary btn-block">1</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('2')" class="btn btn-secondary btn-block">2</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('3')" class="btn btn-secondary btn-block">3</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('-')" class="btn btn-warning btn-block">-</button>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-3">
+        <button onclick="displayContent('0')" class="btn btn-secondary btn-block">0</button>
+      </div>
+      <div class="col-3">
+        <button onclick="removelastdigit()" class="btn btn-danger btn-block">&#9003</button>
+      </div>
+      <div class="col-3">
+        <button onclick="calcClear()" class="btn btn-danger btn-block">C</button>
+      </div>
+      <div class="col-3">
+        <button onclick="displayContent('+')" class="btn btn-warning btn-block">+</button>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <button onclick="calOutput()" class="btn btn-success btn-block">=</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="./main.js"></script>
+</html>
